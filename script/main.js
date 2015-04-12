@@ -31,30 +31,20 @@ document.addEventListener("DOMContentLoaded", function(event){
 });
 
 function initialize(){
-
   MELI.login(function(){
-
-    MELI.get('/user/me', {}, function(data){
-
+    MELI.get('/users/me',{},function(data){
       swal("Logueado!", "comenzemos a trabajar", "success");
-      var userId = data[2].id;
-
-      MELI.get('/user/' + userId + '/items/search?access_token=' + MELI.getToken(), {}, function(data){
-
+      userID = data[2].id
+      MELI.get('/users/'+userID+'/items/search?access_token='+MELI.getToken(),{},function(data){
         var items = data[2].results;
         var itemsL = items.length;
-
-        for(i=0; i< itemsL; i++){
-          MELI.get('/items/' + items[i], {}, function(data){
+        for (var i = 0; i < itemsL ; i++) {
+          MELI.get('/items/' + items[i],{},function(data){
             console.log('Titulo: ' + data[2].title);
-            console.log('Titulo: ' + data[2].title);
+            console.log('Precio: ' + data[2].price);
           });
-        }
-
+        };
       });
-
     });
-
   });
-
-}
+};
