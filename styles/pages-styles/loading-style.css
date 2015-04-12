@@ -1,0 +1,28 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  background-color: #2D3142;
+}
+.fil{
+  -webkit-animation-delay:0.7s;
+  -moz-animation-delay:0.7s;
+    animation-delay:0.7s;
+}
+.loader{
+  width: 200px;
+  height: 200px;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -100px; 
+}
+
+.loader-inner{
+  width: 56px;
+  margin:auto;
+  margin:78.5px 72px;
+}

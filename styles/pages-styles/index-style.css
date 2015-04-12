@@ -1,0 +1,15 @@
+body {
+  color: #fff;
+  padding-top: 50px;
+}
+
+.fil{
+  -webkit-animation-delay:0.7s;
+  -moz-animation-delay:0.7s;
+    animation-delay:0.7s;
+}
+
+.fondo{
+  background:#2D3142;
+  border-color: #2D3142;
+}
