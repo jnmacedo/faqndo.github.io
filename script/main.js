@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 
 function initialize(){
   MELI.login(function(){
-    MELI.get('user/me', {}, function(data){
+    MELI.get('/user/me', {}, function(data){
       swal('Logueado!', "comenzemos a trabajar", 'success');
       var userId = data[2].id;
       MELI.get('/user/' + userId + '/items/search?access_token' + MELI.getToken(), {}, function(data){
